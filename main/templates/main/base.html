@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adarsh Srinivasan</title>
+    <link rel="stylesheet" href="{% static 'main/styles.css' %}">
+</head>
+<body>
+    <div class="background"></div>
+
+    <div class="navbar">
+        <a href="/" class="{% if request.path == '/' %}active{% endif %}">Home</a>
+        <a href="/about/" class="{% if request.path == '/about/' %}active{% endif %}">About</a>
+        <a href="/projects/" class="{% if request.path == '/projects/' %}active{% endif %}">Projects</a>
+        <a href="/contact/" class="{% if request.path == '/contact/' %}active{% endif %}">Contact</a>
+    </div>
+
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
