@@ -1,0 +1,94 @@
+/* Full page reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    color: #000;
+}
+
+/* Fixed full-screen background */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url("/static/main/FINAL.jpg") no-repeat center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    z-index: -1;
+    opacity: 1;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 1em 0;
+    text-align: center;
+    z-index: 10;
+}
+.navbar a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.navbar a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 255, 100, 0.5);
+}
+
+.navbar a.active {
+    background-color: #00cc66;
+    color: white;
+}
+
+
+.navbar a:hover,
+.navbar a.active {
+    background-color: #00cc66;  /* or your preferred green */
+    color: white !important;    /* force text to stay white */
+}
+
+
+/* Main content */
+.content {
+    padding-top: 100px;
+    padding-bottom: 60px;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* White card container */
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2em;
+}
+
+.project-box {
+    background: #f0f0f0;
+    border-left: 5px solid #00cc99;
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 5px;
+}
