@@ -1,11 +1,36 @@
 {% extends 'main/base.html' %}
 {% block content %}
-<div class="card">
-    <h2>Contact</h2>
-    <ul>
-        <li><strong>Phone:</strong> <a href="tel:+916369881247">+91 63698-81247</a></li>
-        <li><strong>Github:</strong> <a href="https://github.com/AdarshSrinivasan1310" target="_blank">GitHub</a></li>
-        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/adarsh-srinivasan-b69a23295/" target="_blank">LinkedIn</a></li>
-    </ul>
+<div class="card" style="max-width: 600px; margin: 0 auto;">
+    <h2>Get In Touch</h2>
+    <p style="color: var(--text-muted); margin-bottom: 2rem;">Feel free to reach out for collaborations or just a friendly hello!</p>
+    
+    <div class="about-info">
+        <ul>
+            <li>
+                <strong>Phone</strong> 
+                <a href="tel:+916369881247" style="color: var(--primary); text-decoration: none;">+91 63698-81247</a>
+            </li>
+            <li>
+                <strong>Email</strong> 
+                <a href="mailto:23pd02@psgtech.ac.in" style="color: var(--primary); text-decoration: none;">23pd02@psgtech.ac.in</a>
+            </li>
+            <li>
+                <strong>GitHub</strong> 
+                <a href="https://github.com/AdarshSrinivasan1310" target="_blank" style="color: var(--primary); text-decoration: none;">AdarshSrinivasan1310</a>
+            </li>
+            <li>
+                <strong>LinkedIn</strong> 
+                <a href="https://www.linkedin.com/in/adarsh-srinivasan-b69a23295/" target="_blank" style="color: var(--primary); text-decoration: none;">Adarsh Srinivasan</a>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="contact-form" style="margin-top: 3rem;">
+        <h3 style="font-size: 1rem; color: #fff;">Send a Message</h3>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea placeholder="Your Message"></textarea>
+        <button class="btn" style="width: 100%;">Send Message</button>
+    </div>
 </div>
 {% endblock %}

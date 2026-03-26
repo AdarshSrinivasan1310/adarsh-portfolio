@@ -1,8 +1,17 @@
 {% extends 'main/base.html' %}
 {% block content %}
-<div class="card">
+<section class="home-hero">
     <h1>Adarsh Srinivasan</h1>
-    <p><strong><i>Welcome to my portfolio</i></strong></p>
-    <p>Page Views: {{ view_count }}</p>
-</div>
+    <p style="font-size: 1.5rem; color: var(--text-muted); margin-bottom: 2rem;">
+        MSc Data Science Student & <span style="color: var(--primary);">Aspiring AI Engineer</span>
+    </p>
+    <div class="card" style="padding: 1.5rem; text-align: center; max-width: 400px; display: inline-block;">
+        <span style="color: var(--primary); font-size: 1.2rem; font-weight: 700;">{{ view_count }}</span> 
+        <span style="color: var(--text-muted);">Page Interactions</span>
+    </div>
+    <div style="margin-top: 2.5rem;">
+        <a href="/projects/" class="btn">View My Work</a>
+        <a href="/contact/" class="btn" style="background: transparent; border: 1px solid var(--primary); color: var(--primary); margin-left: 1rem;">Contact Me</a>
+    </div>
+</section>
 {% endblock %}

@@ -1,15 +1,40 @@
 {% extends 'main/base.html' %}
+{% load static %}
 {% block content %}
 <div class="card">
-    <h2>About Me</h2>
-    <ul>
-        <li><strong>Name:</strong> Adarsh Srinivasan</li>
-        <li><strong>DOB:</strong> 13.10.2005</li>
-        <li><strong>College:</strong> PSG College of Technology</li>
-        <li><strong>Course:</strong> MSc Data Science (2023–2028)</li>
-        <li><strong>10th Std:</strong> 88.6% <i>[GRD PUBLIC SCHOOL , CBE]</i></li>
-        <li><strong>12th Std:</strong> 82.2% <i>[GRD PUBLIC SCHOOL , CBE]</i></li>
-        <li><strong>Nationality:</strong> Indian</li>
-    </ul>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+        <h2 style="margin: 0;">Professional Profile</h2>
+        <a href="{% static 'main/docs/resume.pdf' %}" download class="btn" style="font-size: 0.85rem; padding: 0.6rem 1.4rem;">Download Resume</a>
+    </div>
+    <div class="about-grid">
+        <div class="about-info" style="border-right: 1px solid var(--glass-border); padding-right: 2rem;">
+            <ul>
+                <li><strong>Full Name</strong> Adarsh Srinivasan</li>
+                <li><strong>Education</strong> MSc Data Science (2023–2028)</li>
+                <li><strong>Institution</strong> PSG College of Technology, Coimbatore</li>
+                <li><strong>Current CGPA</strong> 7.00</li>
+                <li><strong>Expertise</strong> ML, Data Analytics, AI Engineering</li>
+            </ul>
+        </div>
+        <div style="padding-left: 1rem;">
+            <h3 style="color: var(--primary); font-size: 0.9rem; text-transform: uppercase;">Technical Skillset</h3>
+            <div class="skills-container" style="margin-top: 1rem; display: flex; flex-wrap: wrap;">
+                <span class="skills-tag">Python</span>
+                <span class="skills-tag">R</span>
+                <span class="skills-tag">SQL</span>
+                <span class="skills-tag">C++</span>
+                <span class="skills-tag">Java</span>
+                <span class="skills-tag">Pandas</span>
+                <span class="skills-tag">Sklearn</span>
+                <span class="skills-tag">Numpy</span>
+                <span class="skills-tag">Streamlit</span>
+                <span class="skills-tag">Django</span>
+                <span class="skills-tag">Next.js</span>
+            </div>
+            
+            <h3 style="color: var(--primary); font-size: 0.9rem; text-transform: uppercase; margin-top: 2rem;">Interests</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Advanced Data Analytics, Supervised Learning, Marketing Analytics, and Scalable AI Systems.</p>
+        </div>
+    </div>
 </div>
 {% endblock %}
