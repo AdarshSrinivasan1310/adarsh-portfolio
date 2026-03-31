@@ -4,6 +4,14 @@
     <h2>Get In Touch</h2>
     <p style="color: var(--text-muted); margin-bottom: 2rem;">Feel free to reach out for collaborations or just a friendly hello!</p>
     
+    {% if messages %}
+        {% for message in messages %}
+            <div style="background: rgba(0, 255, 163, 0.1); color: var(--primary); padding: 1rem; border-radius: 12px; margin-bottom: 1.5rem; border: 1px solid rgba(0, 255, 163, 0.2); font-size: 0.9rem;">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+
     <div class="about-info">
         <ul>
             <li>
@@ -25,12 +33,13 @@
         </ul>
     </div>
     
-    <div class="contact-form" style="margin-top: 3rem;">
+    <form method="POST" class="contact-form" style="margin-top: 3rem;">
+        {% csrf_token %}
         <h3 style="font-size: 1rem; color: #fff;">Send a Message</h3>
-        <input type="text" placeholder="Your Name">
-        <input type="email" placeholder="Your Email">
-        <textarea placeholder="Your Message"></textarea>
-        <button class="btn" style="width: 100%;">Send Message</button>
-    </div>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+    </form>
 </div>
 {% endblock %}
